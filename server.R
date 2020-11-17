@@ -43,7 +43,7 @@ shinyServer(function(input,output,session){
   sim.data <- eventReactive(input$go,ignoreNULL = F,{
     validate(
       #need((input$nPop==length(p())|length(p())==1),"number of populations must equal number of starting allele frequencies."),
-      need(input$gen<1001,"Please select < 1001 generations."),
+      need(input$gen<10001,"Please select < 10001 generations."),
       need(input$nPop<101,"Please select < 101 populations"),
       need(max(n())<=10000000,"Please select n <= 10,000,000"),
       need(input$plotStats!="","Select a variable to plot.")
