@@ -12,7 +12,7 @@ shinyUI(fluidPage(
       sliderInput("m","Migration Rate",0.001,min=0,max=0.2),
       numericInput("nPop","Number of Populations",10,min=1,max=100),
       textInput("n","Population Size",value=100),
-      numericInput("gen","Number of Generations",100,min=1,max=5000),
+      numericInput("gen","Number of Generations",100,min=1,max=10000),
       checkboxInput("infinitePop","Infinite Population (no drift)",value = F),
       checkboxGroupInput(inputId="plotStats",label="plot:",choices=c("p","He","Hs","Ht","Fst","W"),inline=T,selected="p"),
       checkboxInput("legend","Legend",value = F),
